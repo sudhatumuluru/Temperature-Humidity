@@ -1,58 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/black"
     android:orientation="vertical"
-    android:weightSum="1">
+    tools:context="com.cmpe277.temperaturehumidity.MainActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/title"
-            android:layout_margin="20dp"
-            android:textColor="@android:color/white"
-            android:textAlignment="center"
-            android:textSize="@dimen/title_text_size"
-            android:textColorHighlight="@android:color/white" />
-    </LinearLayout>
+        android:text="@string/title"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:textSize="@dimen/title_text_size"
+        android:textColorHighlight="@android:color/white" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="20dp">
-
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/temp_label"
+            android:layout_margin="10dp"
             android:textColor="@android:color/white"
-            android:textSize="@string/textsize"
             android:textAlignment="center"
-            android:layout_gravity="center"
+            android:textSize="@dimen/textsize"
             android:textColorHighlight="@android:color/white" />
 
         <EditText
-            android:id="@+id/temp"
+            android:id="@+id/temperature"
             android:layout_width="273dp"
             android:layout_height="40dp"
             android:background="@android:color/white"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:ems="5">
-        </EditText>
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="15dp">
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,7 +54,7 @@
             android:text="@string/humid_label"
             android:textColor="@android:color/white"
             android:paddingLeft="35dp"
-            android:textSize="@string/textsize"
+            android:textSize="@dimen/textsize"
             android:textColorHighlight="@android:color/white" />
 
         <EditText
@@ -69,17 +63,16 @@
             android:layout_height="40dp"
             android:background="@android:color/white"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:ems="5" />
-
+             />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayout02"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:layout_alignParentBottom="true">
+
         <Button
-            android:id="@+id/Button02"
+            android:id="@+id/set"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textCapSentences"
@@ -88,11 +81,11 @@
             android:padding="@dimen/activity_horizontal_margin"
             android:layout_weight="1"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/title_text_size"
-            android:text="Set">
-        </Button>
+            android:textSize="@dimen/textsize"
+            android:onClick="onSet"
+            android:text="Set"/>
         <Button
-            android:id="@+id/Button03"
+            android:id="@+id/cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textCapSentences"
@@ -102,8 +95,8 @@
             android:textSize="@dimen/title_text_size"
             android:layout_margin="25dp"
             android:layout_weight="1"
-            android:text="Cancel">
-        </Button>
+            android:onClick="onCancel"
+            android:text="Cancel"/>
     </LinearLayout>
 
 </LinearLayout>
