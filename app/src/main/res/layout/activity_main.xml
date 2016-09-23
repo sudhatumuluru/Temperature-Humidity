@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/humid_label"
             android:textColor="@android:color/white"
-            android:paddingLeft="35dp"
+            android:paddingLeft="40dp"
             android:textSize="@dimen/textsize"
             android:textColorHighlight="@android:color/white" />
 
@@ -62,7 +62,7 @@
             android:layout_width="273dp"
             android:layout_height="40dp"
             android:background="@android:color/white"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="35dp"
              />
     </LinearLayout>
 

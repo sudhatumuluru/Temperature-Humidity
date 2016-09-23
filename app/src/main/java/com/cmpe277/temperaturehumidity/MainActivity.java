@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent("poultry.farm.current.temperature");
             intent.putExtra(TEMPERATURE, temperature);
             sendBroadcast(intent);
-            //Toast.makeText(MainActivity.this, "Your values are set!!!",
-              //      Toast.LENGTH_LONG).show();
         }
 
     }
